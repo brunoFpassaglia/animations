@@ -5,6 +5,26 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "3d",
+            "cwd": "three_d_animation",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "three_d_animation (profile mode)",
+            "cwd": "three_d_animation",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "three_d_animation (release mode)",
+            "cwd": "three_d_animation",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
             "name": "basic",
             "cwd": "basic",
             "request": "launch",

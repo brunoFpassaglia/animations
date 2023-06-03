@@ -71,7 +71,7 @@ class _MainAppState extends State<MainApp> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    Future.delayed(Duration(seconds: 1), () {
+    Future.delayed(const Duration(seconds: 1), () {
       _animationRotationZController
         ..reset()
         ..forward();
