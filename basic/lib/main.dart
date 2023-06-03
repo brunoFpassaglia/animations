@@ -28,7 +28,6 @@ class _MainAppState extends State<MainApp> with SingleTickerProviderStateMixin {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     _controller.dispose();
     super.dispose();
   }
@@ -42,7 +41,7 @@ class _MainAppState extends State<MainApp> with SingleTickerProviderStateMixin {
             animation: _controller,
             builder: (BuildContext context, Widget? child) {
               return Transform(
-                origin: Offset(50, 50),
+                origin: const Offset(50, 50),
                 transform: Matrix4.identity()..rotateY(_animation.value),
                 child: Container(
                   width: 100,
