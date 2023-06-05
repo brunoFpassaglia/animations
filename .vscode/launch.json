@@ -5,6 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "hero",
+            "cwd": "hero",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
             "name": "3d",
             "cwd": "three_d_animation",
             "request": "launch",
