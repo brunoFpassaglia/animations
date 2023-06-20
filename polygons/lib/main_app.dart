@@ -41,27 +41,33 @@ class _MainAppState extends State<MainApp> with TickerProviderStateMixin {
       home: Scaffold(
         body: Center(
           child: AnimatedBuilder(
-              animation: Listenable.merge(
-                  [_animation, _radiusAnimation, _rotationAnimation]),
-              builder: (context, _) {
-                return Transform(
-                  alignment: Alignment.center,
-                  transform: Matrix4.identity()
-                    ..rotateX(_rotationAnimation.value)
-                    ..rotateY(_rotationAnimation.value)
-                    ..rotateZ(_rotationAnimation.value),
-                  child: Transform.rotate(
-                    angle: _rotationAnimation.value,
-                    child: CustomPaint(
-                      painter: PolygonPainter(_animation.value),
-                      child: SizedBox(
-                        width: _radiusAnimation.value,
-                        height: _radiusAnimation.value,
-                      ),
+            animation: Listenable.merge(
+              [
+                _animation,
+                _radiusAnimation,
+                _rotationAnimation,
+              ],
+            ),
+            builder: (context, _) {
+              return Transform(
+                alignment: Alignment.center,
+                transform: Matrix4.identity()
+                  ..rotateX(_rotationAnimation.value)
+                  ..rotateY(_rotationAnimation.value)
+                  ..rotateZ(_rotationAnimation.value),
+                child: Transform.rotate(
+                  angle: _rotationAnimation.value,
+                  child: CustomPaint(
+                    painter: PolygonPainter(_animation.value),
+                    child: SizedBox(
+                      width: _radiusAnimation.value,
+                      height: _radiusAnimation.value,
                     ),
                   ),
-                );
-              }),
+                ),
+              );
+            },
+          ),
         ),
       ),
     );
